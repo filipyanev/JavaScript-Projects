@@ -1,0 +1,105 @@
+
+body {
+	background: url("bkgr.jpg") repeat-y; 
+	background-size: cover;
+	background-position: center;
+
+}
+#banner {
+	margin-left: 20%;
+	margin-right: 20%;
+	background-image: url("Tank3.png");	
+ 	background-position: center;
+ 	background-size: cover;
+ 	repeat: no-repeat;
+ 	height: 15rem;
+ 	display: flex;	
+ 	justify-content: center;
+ 	align-items: center;
+ 	text-align: center;
+ /*	color: #816A48;	*/
+	color: #605D3C;
+	font-family: 'Special Elite', cursive;
+	font-size: 4rem;
+	font-weight:lighter;
+text-shadow: -1px 0 White, 0 1px White, 1px 0 White, 0 -1px White;
+}
+#banner:hover {
+	filter: brightness(130%);
+	transition: 2s;
+	transition-timing-function: ease-out;
+
+}
+
+div#board {
+	position: relative;
+	width: 1024px;
+	height: 863px; 
+	margin: auto;		
+
+
+	
+}
+div#messageArea {
+	position: absolute;
+	top: 50px;
+	left: 98px;
+	font-family: 'Oxygen Mono', monospace;
+	font-size: 2em;
+/*	color: rgb(83, 175, 19); */
+	color: #555;
+}
+.hit {
+	background: url("tankicon.png") no-repeat center center;
+	background-size: 94px 94px;
+}
+.miss {
+	background: url("cross1.png") no-repeat center center;
+	background-size: 94px 94px;
+}
+table {
+	border-spacing: 0px; 
+	/* could use border-collapse instead */
+	/* border-collapse: collapse; */
+	position: absolute;
+/*	left: 173px; */
+	left: 98px;
+	top: 98px; 
+	font-family: 'Special Elite', cursive;
+	font-size: 2em;
+	text-shadow: -1px 0 White, 0 1px White, 1px 0 White, 0 -1px White;
+	color: #605D3C;
+}
+.rowTitle {
+	border: none;
+	text-align: right;
+	font-family: 'Special Elite', cursive;
+	font-size: 2em;
+	color: #605D3C;
+	text-shadow: -1px 0 White, 0 1px White, 1px 0 White, 0 -1px White;
+}
+td {
+	width: 94px;
+	height: 94px;		
+	border: 2px solid black;
+	border-radius: 10px;
+
+}
+form {
+	position: absolute;
+	font-family: 'Special Elite', cursive;
+	top: 0px;
+	left: 98px;
+	padding: 15px;
+/*	background-color: rgb(83, 175, 19); */
+/*	background-color: #E1C794; 		*/
+}
+form input {
+/*	background-color: rgb(152, 207, 113);
+	border-color: rgb(83, 175, 19);        */
+	background-color: transparent;		
+	border-color: #816A48;
+	font-family: 'Special Elite', cursive;
+	font-size: 2em;
+}
+
