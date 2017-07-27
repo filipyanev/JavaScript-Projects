@@ -1,0 +1,40 @@
+<!doctype>
+<html>
+<head>
+	<title>Game v.2</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+
+<body>	
+	<div id="header">
+		<h2 id="headerTitle">Guess the answer!</h2>
+		<h2 id="raCounter">0</h2>
+		<h2 id="waCounter">0</h2><br />
+	</div>
+	<div id="ruller">
+		<div id="leftSide"></div>
+		<div id="rightSide"></div>
+	</div>
+
+	<div id="qAndAZone">
+		<p id="questionParagraph">function areYouReady() {___}</p>
+
+		<button id="startButton" onclick="setQuestion(getIndex())">Start Now!</button><br />
+		<div id="ansButtons">
+		<button id="ans1" onclick="buttonOne()">{___}</button>
+		<button id="ans2" onclick="buttonTwo()">{___}</button>
+		<button id="ans3" onclick="buttonThree()">{___}</button>
+		<button id="ans4" onclick="buttonFour()">{___}</button><br />
+		</div>
+
+		<button id="exit" onclick="exitGame()">Exit</button>
+		<div id="chronoDiv">
+			<p id="chronology">Chronology</p>
+		</div>
+	
+
+	</div>
+ 	<script src="questionsGame1.js"></script>
+</body>
+</html>
