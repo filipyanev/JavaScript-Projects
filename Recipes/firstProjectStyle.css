@@ -1,0 +1,446 @@
+			body {
+			/*		  background: linear-gradient(to right,rgba(87, 73, 121, 0.19), rgba(234, 170, 154, 0.56));		*/
+			/*		  background-color: #f8f8ff;	*/
+			background-color: #d5dbe5;
+			/*		  height: 3000px;    */
+		}
+		
+		#header {
+			/*		  background: linear-gradient(to right, rgba(177, 141, 213, 0.39), rgba(183, 129, 116, 0.38)); 	*/
+			/*		  position: relative;	*/
+			background-image: url("http://payload424.cargocollective.com/1/5/187819/10781873/GoodMorning-2.jpg");
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			filter: brightness(90%);
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 15vw;
+			color: white;
+			width: 90%;
+			height: 60vh;
+			text-align: center;
+			margin: auto;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			transition: 2s;
+		}
+		
+		#header:hover {
+			transition: 2s;
+		}
+		
+		#shHeader {
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-family: 'Rubik', sans-serif;
+			font-size: 6vw;
+			color: #555;
+			width: 90%;
+			height: 100px;
+			text-align: center;
+			margin: auto;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			transition: 2s;
+		}
+		
+		#firstContainer {
+			display: none;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			margin-left: 5%;
+			background-image: url("http://essence.themestudio.net/wp-content/uploads/2015/12/line_wave_1.png");
+			background-size: contain;
+			width: 90%;
+			height: 400px;
+			text-align: center;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			overflow: hidden;
+			transition: 2s;
+		}
+		
+		#fcr {
+			margin-top: 40px;
+			margin-bottom: 40px;
+			margin-left: 5%;
+			background-image: url("http://www.freeiconspng.com/uploads/food-icon-7.png");
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size:auto 100%;
+			width: 90%;
+			height: 200px;
+			text-align: center;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			overflow: hidden;
+		  transition: 2s;		
+			font-family: 'Roboto Slab', serif;
+			font-size: 10vh;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		
+		#firstRow {
+			overflow: hidden;
+		}
+		
+		#fc_1,
+		#fc_2 {
+			width: 100%;
+			position: relative;
+			text-align: center;
+			align-items: center;
+			padding-top: 20px;
+		}
+		
+		#fc_2 {
+			height: 100%;
+			background-image: url("background.jpg");
+			background-size: cover;
+			/*		  display: flex;
+  		  align-items: center;
+  		  justify-content: center;
+		  filter: brightness(110%);			*/
+			font-family: 'Open Sans', sans-serif;
+			color: white;
+		}
+		
+		#fc_1 {
+			/*		  height: 30%;			*/
+			background-color: white;
+			opacity: 0.9;
+		}
+		
+		#cont1Title {
+			margin-top: 10%;
+			margin-bottom: 5%;
+			font-family: 'Open Sans', sans-serif;
+			color: white;
+			font-size: 200%;
+		}
+		
+		#secondContainer {
+			margin-top: 40px;
+			margin-left: 5%;
+			width: 90%;
+			height: 400px;
+			position: relative;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			overflow: hidden;
+		}
+		
+		#el1,
+		#el2,
+		#el3,
+		#el4,
+		#el5,
+		#el6,
+		#el7,
+		#el8 {
+			position: absolute;
+			height: 50%;
+			width: 25%;
+		}
+		
+		#el1:hover,
+		#el2:hover,
+		#el3:hover,
+		#el4:hover,
+		#el5:hover,
+		#el6:hover,
+		#el7:hover,
+		#el8:hover {
+			filter: brightness(110%);
+			transition: 1s;
+		}
+		
+		#el1 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/533215.jpg");
+			background-size: cover;
+			top: 0;
+			left: 0;
+		}
+		
+		#el2 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/720645.jpg");
+			background-size: cover;
+			top: 0;
+			left: 25%;
+		}
+		
+		#el3 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/430174.jpg");
+			background-size: cover;
+			top: 0;
+			left: 50%;
+		}
+		
+		#el4 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/684916.jpg");
+			background-size: cover;
+			top: 0;
+			left: 75%;
+		}
+		
+		#el5 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/3317592.jpg");
+			background-size: cover;
+			top: 50%;
+			left: 0;
+		}
+		
+		#el6 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/4523973.jpg");
+			background-size: cover;
+			top: 50%;
+			left: 25%;
+		}
+		
+		#el7 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/600x600/959084.jpg");
+			background-size: cover;
+			top: 50%;
+			left: 50%;
+		}
+		
+		#el8 {
+			background-image: url("http://images.media-allrecipes.com/userphotos/720x405/1124160.jpg");
+			background-size: cover;
+			top: 50%;
+			left: 75%;
+		}
+		
+		#el1_1 {
+			left: 0;
+		}
+		
+		#el2_2 {
+			left: 25%;
+		}
+		
+		#el3_3 {
+			left: 50%;
+		}
+		
+		#el4_4 {
+			left: 75%;
+		}
+		
+		#el5_5 {
+			left: 0;
+		}
+		
+		#el6_6 {
+			left: 25%;
+		}
+		
+		#el7_7 {
+			left: 50%;
+		}
+		
+		#el8_8 {
+			left: 75%;
+		}
+		
+		.upLayer:hover {
+			top: 0;
+			transition: 1s;
+		}
+		
+		.upLayer {
+			text-align: center;
+			padding: 0;
+			position: absolute;
+			width: 25%;
+			height: 50%;
+			background-color: whitesmoke;
+			top: +47%;
+			opacity: 0.8;
+		}
+		
+		.downLayer {
+			text-align: center;
+			padding: 0;
+			position: absolute;
+			width: 25%;
+			height: 50%;
+			background-color: whitesmoke;
+			bottom: -47%;
+			opacity: 0.8;
+		}
+		
+		.downLayer:hover {
+			bottom: 0;
+			transition: 1s;
+		}
+		
+		h6 {
+			font-family: 'Pangolin', cursive;
+			color: #333;
+			font-size: 140%;
+			margin: 15%;
+		}
+		
+		.tryButton {
+			width: 60px;
+			height: 60px;
+			font-family: 'Pangolin', cursive;
+			border: 3px solid White;
+			font-size: 110%;
+			color: White;
+			border-radius: 50%;
+			background-color: Transparent;
+		}
+		
+		#macImgs {
+			background-image: url("https://media2.popsugar-assets.com/files/2012/02/06/2/192/1922195/93301fc98a9df617_basic_macarons_main2.preview.jpg");
+			background-size: 100% 100%:
+		}
+		
+		#navbar {
+			position: fixed;
+			display: flex;
+			align-items: center;
+			top: 0;
+			right: 0;
+			z-index: 1000;
+			width: 100%;
+			height: 50px;
+			overflow: hidden;
+		}
+		
+		.navItem {
+			z-index: 1100;
+			padding-top: 20px;
+			vertical-align: middle;
+			background-color: whitesmoke;
+			color: black;
+			font-weight: 900;
+			width: 150px;
+			height: 100%;
+			float: left;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		
+		.slideImg {
+			display: none;
+			margin-left: 5%;
+			height: 100px;
+			width: 90%;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+		}
+		
+		#container {
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			background-color: #649681;
+		}
+		
+		.cont {
+			margin-top: -70px;
+			margin-left: -50px;
+			height: 300px;
+			width: 50%;
+			position: absolute;
+			transition: 2s;
+			-ms-transform: rotate(7deg);
+			/* IE 9 */
+			-webkit-transform: rotate(7deg);
+			/* Chrome, Safari, Opera */
+			transform: rotate(7deg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		
+		#cont11 {
+			background-image: url("http://img.taste.com.au/MudZOM3z/taste/2016/11/french-fries-87711-1.jpeg");
+			border-right: 10px solid white;
+			z-index: 10;
+		}
+		
+		#cont22 {
+			background-color: blue;
+			background-image: url("http://smokeybones.com/wp-content/uploads/2015/11/loaded-bbq-burger.jpg");
+			left: 33.3%;
+			border-right: 10px solid white;
+			border-left: 10px solid white;
+			z-index: 20;
+		}
+		
+		#cont33 {
+			background-color: black;
+			background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/03/d3/9c/e8/wtf-what-tasty-food.jpg");
+			left: 66.6%;
+			border-left: 10px solid white;
+			z-index: 30;
+		}
+		
+		#menuBar {
+			display: none;
+			margin-top: 0;
+			width: 90%;
+			margin-left: 5%;
+			-webkit-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			-moz-box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			box-shadow: 0px 18px 62px -14px rgba(28, 28, 28, 0.64);
+			overflow: hidden;
+		}
+		
+		.mi {
+			font-family: 'Roboto Slab', serif;
+			float: left;
+			padding-top: 10px;
+			width: 25%;
+			height: 100%;
+			text-align: center;
+		}
+		
+		.mi:hover {
+			background-color: #e5db20;
+		}
+#footer{
+	width: 90%;
+	margin-left: 5%;
+	height: 350px;
+	  background: #d5dbe5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d5dbe5, #eff2f7); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d5dbe5, #eff2f7); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d5dbe5, #eff2f7); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d5dbe5, #eff2f7); /* Standard syntax */
+}
+.fel {
+	padding-top: 80px;
+	padding-left: 40px;
+	height: 100%;
+	width: 29%;
+	float: left;
+	text-align:left;
+	color: #9b9b9b;
+	    
+}
+#fel1, #fel2,#fel3 {
+	line-height: 150%;
+}

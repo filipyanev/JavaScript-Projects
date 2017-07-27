@@ -1,0 +1,156 @@
+<html>
+
+<head>
+
+	<title>Food Recipes</title>
+	<link rel="stylesheet" type="text/css" href="firstProjectStyle.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="header" onmouseover="shrDiv()" onclick="showDiv()">RECIPES</div>
+	<div class="slideImg" id="slImg">
+		<div id="container">
+			<div id="cont11" class="cont" onmouseover="makeBiggerDiv1(this)" onmouseout="normalizeDiv1(this)" onclick="getMyinfo(this)"></div>
+			<div id="cont22" class="cont" onmouseover="makeBiggerDiv2(this)" onmouseout="normalizeDiv2(this)" onclick="getMyinfo(this)"></div>
+			<div id="cont33" class="cont" onmouseover="makeBiggerDiv3(this)" onmouseout="normalizeDiv3(this)" onclick="getMyinfo(this)"></div>
+		</div>
+	</div>
+	<div id="menuBar" style="height: 50px;background-color: white;">
+		<div class="mi">Add Recipe</div>
+		<div class="mi">Your Favourite</div>
+		<div class="mi">Eesy</div>
+		<div class="mi">Search</div>
+	</div>
+
+
+
+
+	<div id="firstContainer" style="overflow: auto;">
+		<h3 style="font-family: 'Source Sans Pro', sans-serif;">
+      A Little Love Goes a Long Way: Basic French Macarons
+    </h3>
+		<div id="macRecipe" id="macImgs" style="width: 80%; margin-left: 10%; height:80%; float:left;font-family: 'Source Sans Pro', sans-serif; ">
+			<h3 style="text-align: left;">
+        NOTES
+      </h3>
+			<p>
+				The basic meringue-style French macaron is merely the springboard for your wildest color and flavor combinations. Try adding a teaspoon of Dutch-process cocoa and red gel food coloring for a red velvet macaron, or a 1/4 teaspoon rose extract and pink
+				gel food coloring for rose. Always add the dry flavorings to the almond meal/powdered sugar mixture and the extracts/gel color to the meringue.
+			</p>
+			<h3 style="text-align: left;">
+        INGREDIENTS
+      </h3>
+			<p style="align-text: left;">
+				2/3 cup almond meal or ground almonds<br /> 1 1/2 cups powdered sugar<br /> 3 large egg whites, room temperature and preferably aged up to 3 days<br /> 5 tablespoons granulated sugar<br /> 1 teaspoon vanilla extract<br />
+			</p>
+			<h3 style="text-align: left;">
+        DIRECTIONS
+      </h3>
+			<p>
+
+				1. Preheat the oven to 280ºF, and position 2 racks in the lower section of the oven. Line 2 rimmed baking sheets with parchment paper. If you have time, draw 1-inch circles on the back of each sheet, spacing the circles at least 1/2-inch apart.
+				<br />2. If your almond meal is very coarse, grind it with the powdered sugar in a food processor until fine. Sift the almond meal-powdered sugar mixture twice through a mesh sieve.
+				<br />3. Place egg whites in the bowl of a stand mixer (or use a hand mixer), and begin to beat on medium-high. When the eggs are frothy, gradually add granulated sugar 1 tablespoon at a time until fully incorporated. Continue to beat the egg white
+				mixture until glossy and stiff peaks form when you lift the beaters. Gently stir in the vanilla extract. Be careful to not overbeat the meringue (e.g., the meringue takes on a clumpy texture).
+				<br />4. Add half of the sifted almond mixture, and gently fold it into the meringue using a flexible silicone spatula. Lift from the bottom, up around the sides, and toward the middle, being careful to not overagitate the meringue and lose too much
+				air. Once the almond mixture is predominantly incorporated, add the second half and repeat the folding motion.
+				<br />5. When the almond mixture is just incorporated, you will need to transform the batter into the appropriate texture. Using the flat of the spatula, "punch" down into the center of the batter, then scrape more batter from the sides to the center,
+				and punch again. You will need to repeat this 10-15 times (or more, depending on your arm strength and the beginning texture of your batter) until the batter slowly and continuously drips back into the bowl when you scoop it up with the spatula. Think
+				of the consistency of molten lava. For the best results, punch the batter a few times, check the consistency, then punch a few more times, etc. Do not make the batter too runny or the macarons won't rise as they should, and you could end up with oil
+				stains on the surface.
+				<br />6. Pour batter into a pastry bag fitted with a 0.4-inch tip. In a pinch, you can also use a gallon-size Ziploc bag: just snip a teeny bit from one of the bottom corners. Twist and clip the top of the bag to avoid overflow. On your prepared baking
+				sheets, pipe out 1-inch rounds in the circles you drew (remember to draw the circles on the back side of your parchment to avoid ink or pencil stains on your macarons!).
+				<br />7. Holding the baking sheet in both hands, rap each baking sheet firmly on the counter two or three times. This smooths out the tops and helps form the "pied" or frilly foot on the bottoms of the macarons. Allow the piped macarons to dry, uncovered,
+				for at least 15 minutes. The macarons should form a very thin, smooth crust where, if you tap it lightly with your finger, the batter will not stick to your finger. If after 15 minutes, the batter is still sticky, let it dry longer. This may take
+				up to an hour on humid days.
+				<br />8. Place both baking sheets in the oven and bake for 15-18 minutes. After the first 2 minutes, open the oven to allow any excess humidity to escape. Halfway through, swap oven racks and rotate the sheets for even baking. The macarons are done
+				when they are baked all the way through and the shells are just hard. Take care to not underbake (insides will still be mushy) or overbake (tops will begin to brown). Remove them from the oven, and cool on baking sheet placed on a wire rack.
+				<br />9. When fully cooled, assemble the macarons with your choice of filling. The assembled macarons can be stored in an airtight container in the refrigerator for up to one week.
+			</p>
+		</div>
+	</div>
+	<div id="fcr" onclick="showRecipe()">
+		Try Random Recipe
+	</div>
+
+	<div id="secondContainer">
+		<div id="firstRow">
+			<div id="el1"></div>
+			<div id="el2"></div>
+			<div id="el3"></div>
+			<div id="el4"></div>
+			<div class="upLayer" id="el1_1">
+				<h6>Shrimp Verde</h6></div>
+			<div class="upLayer" id="el2_2">
+				<h6>Tangy Grilled Pork Tenderloin</h6></div>
+			<div class="upLayer" id="el3_3">
+				<h6>Rosemary Lemon Grilled Chicken</h6></div>
+			<div class="upLayer" id="el4_4">
+				<h6>Lemon Herb Barbeque Sauce for Chicken</h6></div>
+		</div>
+		<div id="secondRow">
+			<div id="el5"></div>
+			<div id="el6"></div>
+			<div id="el7"></div>
+			<div id="el8"></div>
+			<div class="downLayer" id="el5_5">
+				<h6>Lasagna Roll Ups</h6></div>
+			<div class="downLayer" id="el6_6">
+				<h6>Perfect Ten Baked Cod</h6></div>
+			<div class="downLayer" id="el7_7">
+				<h6>Lemon Blueberry Bread</h6></div>
+			<div class="downLayer" id="el8_8">
+				<h6>Raspberry Meringue Bars</h6></div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="fel" id="fel1">
+				<div style="color:#555556;">
+					Suport
+			</div><br />
+				Site Map<br />
+				Contact Us<br />
+				Customer Support
+		</div>
+		<div class="fel" id="fel2">
+			<div style="color:#555556;">
+				About Us
+			</div><br />
+			Newsroom<br />
+			Jobs at Allrecipes<br />
+			<div>
+				Global Community
+			</div>
+			© 2017 Allrecipes.com<br />
+			All Rights Reserved
+		</div>
+		<div class="fel" id="fel3">
+		<div style="color:#555556;">
+			Advertising
+			</div><br />
+Advertise with Us<br />
+Meredith Women's Network<br />
+		<div style="color:#555556;">
+			More Allrecipes
+			</div><br />
+Allrecipes Magazine – Subscribe<br />
+Allrecipes Apps<br />
+Food Wishes Videos<br />
+The Allrecipes Blog
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="firstProject.js"></script>
+
+</body>
+
+</html>
