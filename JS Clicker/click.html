@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+<title>ClickR</title>
+<link href="https://fonts.googleapis.com/css?family=Biryani" rel="stylesheet">
+<style>
+html {
+  height: 100%;
+}
+body {
+
+  background-color: #ffe0e5 ;
+  height: 100%;
+}
+
+#counterDisplay {
+  margin-left: 5%;
+  height: 400px;
+  width: 90%;
+  background-color: #9cf76e;
+  text-align: center;
+  border: 1px solid #375e23;
+		
+}
+#counter {
+  padding-top: 100px;
+  font-family: 'Biryani', sans-serif;
+  color: #fca9b6;
+  font-size: 500%;
+		
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #c7fcd0;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  margin-left: 5%;
+  height: 80%;
+  width: 90%;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+#gameBoard {
+	padding-top: 5%;
+	margin: auto;
+	width: 600px;
+	height: 620px;
+	display: none;
+
+}
+#balance {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #e8aeb7;
+
+}
+#left {
+	float: left;
+	height: 100%;
+	width: 400px;
+	max-width: 600px;
+	min-width: 0px;
+	background-color: #ffccd4;
+}
+table {
+	width: 600px;
+	height: 600px;
+	border: 1px solid #e8aeb7;
+	
+}
+td {
+	border: 1px solid #e8aeb7;
+	background-color: #c7fcde;
+}
+.gameCell {
+
+	background-color: #ffccd4;
+}
+.normallCell {
+
+/*	background-color: #c7fcd0;	*/
+	background-color: #c7fcde;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
+
+	<div id="myDiv" class="animate-bottom" onclick="clickMe()">
+		<h1 id="counter">CLICK SPEEDOMETER</h1>
+	</div>
+	<div id="gameBoard">
+		<div id="balance">
+			<div id="left"></div>
+		</div>	
+		<table id = "gameTable" cellspacing="0" cellpadding="0">
+			<tr><td id="1" onclick="checkClick1()"></td><td id="2" onclick="checkClick2()"></td><td id="3" onclick="checkClick3()"></td><td id="16" onclick="checkClick16()"></td><td id="17" onclick="checkClick17()"></td></tr>
+			<tr><td id="4" onclick="checkClick4()"></td><td id="5" onclick="checkClick5()"></td><td id="6" onclick="checkClick6()"></td><td id="18" onclick="checkClick18()"></td><td id="19" onclick="checkClick19()"></td></tr>
+			<tr><td id="7" onclick="checkClick7()"></td><td id="8" onclick="checkClick8()"></td><td id="9" onclick="checkClick9()"></td><td id="20" onclick="checkClick20()"></td><td id="21" onclick="checkClick21()"></td></tr>	
+			<tr><td id="10" onclick="checkClick10()"></td><td id="11" onclick="checkClick11()"></td><td id="12" onclick="checkClick12()"></td><td id="22" onclick="checkClick22()"></td><td id="23" onclick="checkClick23()"></td></tr>
+			<tr><td id="13" onclick="checkClick13()"></td><td id="14" onclick="checkClick14()"></td><td id="15" onclick="checkClick15()"></td><td id="24" onclick="checkClick24()"></td><td id="25" onclick="checkClick25()"></td></tr>		
+		</table>
+
+	</div>
+
+
+
+
+<script>
+
+
+var myVar;
+var counter = 0;
+var firstDate;
+var firstTime;
+var actualDate;
+var actualTime;
+var speed = 0;
+var resultSpeed = 0;
+var currentClick= 0;
+var randIndex = 0;
+var trueClick =	0;
+var falseClick = 0;
+var currWidth = 400;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+}
+
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("gameBoard").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+
+}
+
+function clickMe(){
+	if(counter < 1) {
+		counter++;
+		firstDate = new Date();
+		actualDate = new Date();
+		firstTime = firstDate.getTime();
+		actualTime = actualDate.getTime();
+		setTimeout(function(){ 
+  			document.getElementById("myDiv").style.display = "none";
+  			document.getElementById("gameBoard").style.display = "block";
+			alert("Your speed is: " + counter/3 + " CPS");
+			resultSpeed = counter/3;
+			makeGameCell();
+ 		}, 3000);
+
+
+	} else {
+  		actualDate = new Date();
+		actualTime = actualDate.getTime();
+		speed = counter;
+		counter++;
+		document.getElementById("counter").innerHTML = counter;
+		checkSpeed();
+	}
+}
+
+function checkSpeed() {
+		if (speed <= 2) {
+		document.getElementById("myDiv").style.backgroundColor = "#cdfcc7";
+		} else if ((speed > 2) && (speed < 4)) {
+		document.getElementById("myDiv").style.backgroundColor = "#c7fcd0";
+		} else {
+		document.getElementById("myDiv").style.backgroundColor = "#c7fcde";
+		}
+}
+function randNum() {
+ 	randIndex = Math.floor(Math.random()*25)+ 1;
+	return randIndex;
+}
+function makeGameCell() {
+
+	var cellId = randNum();
+	console.log("cell id:" + cellId);
+	document.getElementById(cellId).className = "gameCell";
+
+
+}
+function checker() {
+	if (currentClick == randIndex) {
+
+		document.getElementById(currentClick).className = "normallCell";
+		console.log(currentClick);
+		trueClick++;
+		console.log("trueClick: " + trueClick);
+		currWidth += 2;
+		document.getElementById("left").style.width = currWidth + "px";
+		checkBalance();
+		makeGameCell();
+
+	} else {
+		falseClick++;
+		document.getElementById(randIndex).className = "normallCell";
+		currWidth -= 2;
+		document.getElementById("left").style.width = currWidth + "px";
+		makeGameCell();
+		console.log("falseClick: " + falseClick);
+		checkBalance();
+	}
+}
+function checkBalance() {
+	var leftWidth = document.getElementById("left").style.width;
+	if(leftWidth == "600px") {
+		document.getElementById("gameBoard").style.display = "none";
+		alert("Too easy for you!");
+	} else if(leftWidth == "0px") {
+		document.getElementById("gameBoard").style.dysplay = "none";
+		alert("Good Luck next time!");
+	}
+}
+function checkClick1() {
+	currentClick = 1;
+	checker();
+}
+function checkClick2() {
+	currentClick = 2;
+	checker();
+}
+function checkClick3() {
+	currentClick = 3;
+	checker();
+}
+function checkClick4() {
+	currentClick = 4;
+	checker();
+}
+function checkClick5() {
+	currentClick = 5;
+	checker();
+}
+function checkClick6() {
+	currentClick = 6;
+	checker();
+}
+function checkClick7() {
+	currentClick = 7;
+	checker();
+}
+function checkClick8() {
+	currentClick = 8;
+	checker();
+}
+function checkClick9() {
+	currentClick = 9;
+	checker();
+}
+function checkClick10() {
+	currentClick = 10;
+	checker();
+}
+function checkClick11() {
+	currentClick = 11;
+	checker();
+}
+function checkClick12() {
+	currentClick = 12;
+	checker();
+}
+function checkClick13() {
+	currentClick = 13;
+	checker();
+}
+function checkClick14() {
+	currentClick = 14;
+	checker();
+}
+function checkClick15() {
+	currentClick = 15;
+	checker();
+}
+function checkClick16() {
+	currentClick = 16;
+	checker();
+}
+function checkClick17() {
+	currentClick = 17;
+	checker();
+}
+function checkClick18() {
+	currentClick = 18;
+	checker();
+}
+function checkClick19() {
+	currentClick = 19;
+	checker();
+}
+function checkClick20() {
+	currentClick = 20;
+	checker();
+}
+function checkClick21() {
+	currentClick = 21;
+	checker();
+}
+function checkClick22() {
+	currentClick = 22;
+	checker();
+}
+function checkClick23() {
+	currentClick = 23;
+	checker();
+}
+function checkClick24() {
+	currentClick = 24;
+	checker();
+}
+function checkClick25() {
+	currentClick = 25;
+	checker();
+}
+
+
+
+</script>
+</body>
+</html>
